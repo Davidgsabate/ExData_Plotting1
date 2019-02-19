@@ -27,12 +27,11 @@ temp <- read.table(
  rm(temp)
 
 # Construct the plot and save it to a PNG file with a width of 480 pixels and a height of 480 pixels.
-# Plot 1 
+#Plot 2
  par(mfrow = c(1, 1))
- hist(datos$Global_active_power, 
-      col = "red", 
-      main = "Global Active Power",
-      xlab = "Global Active Power (kilowatts)", 
-      ylab = "Frequency")
- dev.copy(png, file = "plot1.png")
+ plot(datos$Date, datos$Global_active_power, 
+      type = "l",
+      ylab = "Global Active Power (kilowatts)", 
+      xlab = "")
+ dev.copy(png, file = "plot2.png")
  dev.off()
